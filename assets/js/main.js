@@ -57,9 +57,9 @@ function getFetch(){
 
 					// Images (in the format of 'url': 'alignment').
 						images: {
-							'/Users/amanda/Files/100Devs/Portfolio Projects/daily-space/images/pexels-pixabay-459475 (1).jpg': 'center',
-							'/Users/amanda/Files/100Devs/Portfolio Projects/daily-space/images/pexels-spacex-60132.jpg': 'center',
-							'/Users/amanda/Files/100Devs/Portfolio Projects/daily-space/images/pexels-frank-cone-6508135.jpg': 'center'
+							'./images/pexels-pixabay-459475 (1).jpg': 'center',
+							'./images/pexels-spacex-60132.jpg': 'center',
+							'./images/pexels-frank-cone-6508135.jpg': 'center'
 						},
 
 					// Delay.
