@@ -1,22 +1,35 @@
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
-  const choice = document.getElementById('date').value
-  console.log(choice)
-  const url = `https://api.nasa.gov/planetary/apod?api_key=utJX5W3AgruUPy0QX4WF8IpTZVLGYgHytW8BICeD&date=${choice}`
+  const choice = document.getElementById('date').value;
+
+  const url = `https://api.nasa.gov/planetary/apod?api_key=utJX5W3AgruUPy0QX4WF8IpTZVLGYgHytW8BICeD&date=${choice}`;
+
+  const reset = (ele) => {
+
+	ele.style.display = 'none';
+	ele.src = "";
+  };
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data)
+
 		const pic = document.getElementById('nasa-pic');
 		const video = document.getElementById('nasa-video');
-		pic.src = "";
-		video.src = "";
-		if (data.media_type === 'image'){
-			pic.src = data.hdurl
-		} else if(data.media_type === 'video'){
-			video.src = data.url
+
+		reset(pic);
+		reset(video);
+
+		if (data.media_type === 'image') {
+
+			pic.src = data.hdurl;
+			pic.style.display = 'block';
+
+		} else if (data.media_type === 'video') {
+
+			video.src = data.url;
+			video.style.display = 'block';
 		}
 		document.getElementById('nasa-title').innerText = data.title
 		document.getElementById('nasa-explanation').innerText = data.explanation
@@ -30,6 +43,8 @@ function getFetch(){
 	"use strict";
 
 	var	$body = document.querySelector('body');
+
+	document.querySelector('#date').max = new Date().toISOString().split("T")[0];
 
 	// Methods/polyfills.
 
