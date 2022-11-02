@@ -78,8 +78,9 @@ html {
   box-sizing: inherit; }
 
 html, body {
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
   width: 100%; }
   @media screen and (max-height: 640px) {
     html, body {
@@ -763,6 +764,9 @@ input[type="button"],
       padding: 0; } }
 
 /* Header */
+#header {
+	padding-top: 10px;
+}
 #header h1 {
   font-size: 3.25em;
   margin: 0 0 0.55em 0; }
@@ -898,8 +902,6 @@ body{
 	flex-direction: row;
 	gap: 25px;
 	align-items: center;
-	margin-top: 2em;
-	
 }
 #nasa-container{
 	display: flex;
@@ -912,9 +914,10 @@ body{
 	display: flex;
 	width: 50%;
 	height: 100%;
+	justify-content: flex-start;
 	flex-direction: column;
-
 }
+
 #nasa-title{
 	font-size: 1.5em;
 	padding-bottom: .2em;
@@ -925,6 +928,11 @@ body{
 /* API Responsiveness */
 
 @media screen and (max-width: 736px) {
+
+	#nasa-flex{
+		min-height: auto;
+	}
+
 	#nasa-title {
 		font-size: 1em;
 	}
@@ -940,10 +948,12 @@ body{
 	
 	#nasa-container {
 		width: 100%; 
+		height: auto;
 	}
 
 	#nasa-wrap {
 		width: 100%; 
+		height: auto;
 	}
 
 }
