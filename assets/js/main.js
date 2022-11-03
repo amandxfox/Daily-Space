@@ -137,19 +137,4 @@ function getFetch(){
 
 		})();
 
-	// Date Selection.
-		(function() {
-
-			// Vars.
-				var $form = document.querySelectorAll('#date-selection-form')[0],
-					$submit = document.querySelectorAll('#date-selection-form input[type="submit"]')[0],
-					$message;
-
-			// Bail if addEventListener isn't supported.
-				if (!('addEventListener' in $form))
-					return;
-
-
-		})();
-
 })();

@@ -78,9 +78,9 @@ html {
   box-sizing: inherit; }
 
 html, body {
-  height: 100vh;
+
   overflow-x: hidden;
-  overflow-y: scroll;
+
   width: 100%; }
   @media screen and (max-height: 640px) {
     html, body {
@@ -764,9 +764,6 @@ input[type="button"],
       padding: 0; } }
 
 /* Header */
-#header {
-	padding-top: 10px;
-}
 #header h1 {
   font-size: 3.25em;
   margin: 0 0 0.55em 0; }
